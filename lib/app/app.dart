@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_advanced_course/presentation/theme_manager.dart';
 
 class MyApp extends StatefulWidget {
   MyApp._internal(); // private named constructor
@@ -14,6 +16,8 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      theme: getApplicationTheme(),
+    );
   }
 }
