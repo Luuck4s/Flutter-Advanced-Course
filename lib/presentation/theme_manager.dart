@@ -22,15 +22,32 @@ ThemeData getApplicationTheme() {
 
       // app bar theme
       appBarTheme: AppBarTheme(
-          centerTitle: true,
-          color: ColorManager.primary,
-          elevation: AppSize.s4,
-          shadowColor: ColorManager.primaryOpacity70,
-          titleTextStyle: getRegularStyle(
-            color: ColorManager.white,
-            fontSize: FontSize.s16
-          ))
+        centerTitle: true,
+        color: ColorManager.primary,
+        elevation: AppSize.s4,
+        shadowColor: ColorManager.primaryOpacity70,
+        titleTextStyle:
+            getRegularStyle(color: ColorManager.white, fontSize: FontSize.s16),
+      ),
+
       // button theme
+      buttonTheme: ButtonThemeData(
+        shape: const StadiumBorder(),
+        disabledColor: ColorManager.grey1,
+        buttonColor: ColorManager.primary,
+        splashColor: ColorManager.primaryOpacity70,
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          textStyle: getRegularStyle(
+            color: ColorManager.white,
+          ),
+          primary: ColorManager.primary,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(AppSize.s12),
+          ),
+        ),
+      )
 
       // text theme
 
