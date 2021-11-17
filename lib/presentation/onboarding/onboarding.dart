@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class OnBoardingView extends StatefulWidget {
-  const OnBoardingView({ Key? key }) : super(key: key);
+  const OnBoardingView({Key? key}) : super(key: key);
 
   @override
   _OnBoardingViewState createState() => _OnBoardingViewState();
@@ -10,8 +10,10 @@ class OnBoardingView extends StatefulWidget {
 class _OnBoardingViewState extends State<OnBoardingView> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return Scaffold(
+      body: Center(
+        child: Text("Welcome"),
+      ),
     );
   }
 }
