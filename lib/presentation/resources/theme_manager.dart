@@ -11,7 +11,7 @@ ThemeData getApplicationTheme() {
     primaryColorLight: ColorManager.primaryOpacity70,
     primaryColorDark: ColorManager.darkPrimary,
     disabledColor: ColorManager.grey1,
-    accentColor: ColorManager.grey,
+    colorScheme: ColorScheme.fromSwatch().copyWith(secondary: ColorManager.grey),
     splashColor: ColorManager.primaryOpacity70,
     // card view theme
     cardTheme: CardTheme(
