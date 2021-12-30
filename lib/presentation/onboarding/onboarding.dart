@@ -8,6 +8,8 @@ import 'package:flutter_advanced_course/presentation/resources/strings_manager.d
 import 'package:flutter_advanced_course/presentation/resources/values_manager.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../resources/routes_manager.dart';
+
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({Key? key}) : super(key: key);
 
@@ -81,7 +83,10 @@ class _OnBoardingViewState extends State<OnBoardingView> {
               Align(
                 alignment: Alignment.centerRight,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                     Navigator.pushReplacementNamed(
+                          context, Routes.loginRoute);
+                  },
                   child: Text(
                     AppStrings.skip,
                     textAlign: TextAlign.end,
