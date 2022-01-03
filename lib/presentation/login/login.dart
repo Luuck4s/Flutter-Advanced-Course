@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_advanced_course/app/di.dart';
 import 'package:flutter_advanced_course/presentation/login/login_viewmodel.dart';
 import 'package:flutter_advanced_course/presentation/resources/assets_manager.dart';
 import 'package:flutter_advanced_course/presentation/resources/color_manager.dart';
 import 'package:flutter_advanced_course/presentation/resources/strings_manager.dart';
 import 'package:flutter_advanced_course/presentation/resources/values_manager.dart';
 
+import '../../data/data_source/remote_data_source.dart';
+import '../../data/repository/repository_impl.dart';
+import '../../domain/repository/repository.dart';
 import '../resources/routes_manager.dart';
 
 class LoginView extends StatefulWidget {
@@ -15,7 +19,8 @@ class LoginView extends StatefulWidget {
 }
 
 class _LoginViewState extends State<LoginView> {
-  LoginViewModel _viewModel = LoginViewModel(null);
+
+  LoginViewModel _viewModel = instance<LoginViewModel>();
 
   TextEditingController _usernameController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
