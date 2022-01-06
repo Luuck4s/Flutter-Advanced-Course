@@ -2,7 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'responses.g.dart';
 
 @JsonSerializable()
-class BaseResponses {
+class BaseResponse {
   @JsonKey(name: "status")
   int? status;
   @JsonKey(name: "message")
@@ -20,11 +20,11 @@ class CustomerResponse {
 
   CustomerResponse(this.id, this.name, this.numOfNotifications);
 
-  // from json
+// from json
   factory CustomerResponse.fromJson(Map<String, dynamic> json) =>
       _$CustomerResponseFromJson(json);
 
-  // to json
+// to json
   Map<String, dynamic> toJson() => _$CustomerResponseToJson(this);
 }
 
@@ -37,18 +37,18 @@ class ContactsResponse {
   @JsonKey(name: "link")
   String? link;
 
-  ContactsResponse(this.email, this.link, this.phone);
+  ContactsResponse(this.email, this.phone, this.link);
 
-  // from json
+// from json
   factory ContactsResponse.fromJson(Map<String, dynamic> json) =>
       _$ContactsResponseFromJson(json);
 
-  // to json
+// to json
   Map<String, dynamic> toJson() => _$ContactsResponseToJson(this);
 }
 
 @JsonSerializable()
-class AuthenticationResponse extends BaseResponses {
+class AuthenticationResponse extends BaseResponse {
   @JsonKey(name: "customer")
   CustomerResponse? customer;
   @JsonKey(name: "contacts")
@@ -56,10 +56,10 @@ class AuthenticationResponse extends BaseResponses {
 
   AuthenticationResponse(this.customer, this.contacts);
 
-  // from json
+// from json
   factory AuthenticationResponse.fromJson(Map<String, dynamic> json) =>
       _$AuthenticationResponseFromJson(json);
 
-  // to json
+// to json
   Map<String, dynamic> toJson() => _$AuthenticationResponseToJson(this);
 }

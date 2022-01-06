@@ -17,24 +17,28 @@ class RepositoryImpl extends Repository {
   @override
   Future<Either<Failure, Authentication>> login(
       LoginRequest loginRequest) async {
-    bool isConnected = await _networkInfo.isConnected;
-
-    if (isConnected) {
+    if (await _networkInfo.isConnected) {
       try {
+        // its safe to call the API
         final response = await _remoteDataSource.login(loginRequest);
 
-        // rigth = Authentication
-        // left = Failure
         if (response.status == ApiInternalStatus.SUCCESS) // success
         {
+          // return data (success)
+          // return right
           return Right(response.toDomain());
         } else {
-          return Left(Failure(response.status ?? ApiInternalStatus.FAILURE, response.message ?? ResponseMessage.DEFAULT));
+          // return biz logic error
+          // return left
+          return Left(Failure(response.status ?? ApiInternalStatus.FAILURE,
+              response.message ?? ResponseMessage.DEFAULT));
         }
       } catch (error) {
-        return (Left(ErrorHanlder.handle(error).failure));
+        print(error);
+        return (Left(ErrorHandler.handle(error).failure));
       }
     } else {
+      // return connection error
       return Left(DataSource.NO_INTERNET_CONNECTION.getFailure());
     }
   }

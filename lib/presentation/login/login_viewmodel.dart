@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter_advanced_course/domain/usecase/login_usecase.dart';
 import 'package:flutter_advanced_course/presentation/base/base_view_model.dart';
+import 'package:flutter_advanced_course/presentation/common/state_renderer/state_renderer.dart';
+import 'package:flutter_advanced_course/presentation/common/state_renderer/state_renderer_impl.dart';
 
 import '../common/freezed_data_classes.dart';
 
@@ -29,7 +31,8 @@ class LoginViewModel extends BaseViewModel
 
   @override
   void start() {
-    // TODO: implement start
+    // view tells state renderer, please show the content of the screen
+    inputState.add(ContentState());
   }
 
   @override
@@ -71,20 +74,33 @@ class LoginViewModel extends BaseViewModel
 
   @override
   login() async {
+    inputState.add(
+      LoadingState(
+        stateRendererType: StateRendererType.POPUP_LOADING_STATE,
+      ),
+    );
     (await _loginUseCase!.execute(
             LoginUseCaseInput(loginObject.username, loginObject.password)))
         .fold(
-            (failure) => {
-                  // left - failure
-                  print(failure.message)
-                },
-            (data) => {
-                  // right - success
-                  print(data.customer?.name)
-                });
+      (failure) => {
+        // left - failure
+        inputState.add(
+          ErrorState(
+            StateRendererType.POPUP_ERROR_STATE,
+            failure.message,
+          ),
+        )
+      },
+      (data) => {
+        // right - success
+        inputState.add(
+          ContentState(),
+        )
+      },
+    );
   }
 
-  _validate(){
+  _validate() {
     inputAllInputs.add(null);
   }
 

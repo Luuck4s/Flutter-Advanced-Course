@@ -36,21 +36,21 @@ class ResponseCode {
   static const int NO_INTERNET_CONNECTION = -7;
 }
 
-class ErrorHanlder implements Exception {
+class ErrorHandler implements Exception {
   late Failure failure;
 
-  ErrorHanlder.handle(dynamic error){
-    if(error is DioError){
+  ErrorHandler.handle(dynamic error) {
+    if (error is DioError) {
       // dio error so its error from response of the API
       failure = _handleError(error);
-    }else {
+    } else {
       // default error
       failure = DataSource.DEFAULT.getFailure();
     }
   }
 
-  Failure _handleError(DioError error){
-    switch(error.type){
+  Failure _handleError(DioError error) {
+    switch (error.type) {
       case DioErrorType.connectTimeout:
         return DataSource.CONNECT_TIMEOUT.getFailure();
       case DioErrorType.sendTimeout:
@@ -58,7 +58,7 @@ class ErrorHanlder implements Exception {
       case DioErrorType.receiveTimeout:
         return DataSource.RECEIVE_TIMEOUT.getFailure();
       case DioErrorType.response:
-        switch(error.response!.statusCode){
+        switch (error.response!.statusCode) {
           case ResponseCode.BAD_REQUEST:
             return DataSource.BAD_REQUEST.getFailure();
           case ResponseCode.FORBIDDEN:
@@ -69,7 +69,7 @@ class ErrorHanlder implements Exception {
             return DataSource.NOT_FOUND.getFailure();
           case ResponseCode.INTERNAL_SERVER_ERROR:
             return DataSource.INTERNAL_SERVER_ERROR.getFailure();
-          default: 
+          default:
             return DataSource.DEFAULT.getFailure();
         }
       case DioErrorType.cancel:
