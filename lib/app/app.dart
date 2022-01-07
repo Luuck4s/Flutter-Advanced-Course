@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_advanced_course/presentation/resources/color_manager.dart';
 import 'package:flutter_advanced_course/presentation/resources/routes_manager.dart';
 import 'package:flutter_advanced_course/presentation/resources/theme_manager.dart';
 

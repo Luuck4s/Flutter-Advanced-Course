@@ -20,7 +20,7 @@ extension CustomerResponseMapper on CustomerResponse? {
 extension ContactsResponseMapper on ContactsResponse? {
   Contacts toDomain() {
     return Contacts(this?.email?.orEmpty() ?? EMPTY,
-        this?.email?.orEmpty() ?? EMPTY, this?.link?.orEmpty() ?? EMPTY);
+        this?.phone?.orEmpty() ?? EMPTY, this?.link?.orEmpty() ?? EMPTY);
   }
 }
 
