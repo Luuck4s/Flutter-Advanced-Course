@@ -19,4 +19,5 @@ class JsonAssets {
   static const loading = "$JSON_PATH/loading.json";
   static const error = "$JSON_PATH/error.json";
   static const empty = "$JSON_PATH/empty.json";
+  static const success = "$JSON_PATH/success.json";
 }

@@ -13,6 +13,7 @@ import 'package:lottie/lottie.dart';
 enum StateRendererType {
   POPUP_LOADING_STATE,
   POPUP_ERROR_STATE,
+  POPUP_SUCCESS_STATE,
 
   FULL_SCREEN_LOADING_STATE,
   FULL_SCREEN_ERROR_STATE,
@@ -53,6 +54,12 @@ class StateRenderer extends StatelessWidget {
           _getAnimatedImage(JsonAssets.error),
           _getMessage(message),
           _getRetryButton(AppStrings.ok, context)
+        ]);
+      case StateRendererType.POPUP_SUCCESS_STATE:
+        return _getPopUpDialog(context, [
+          _getAnimatedImage(JsonAssets.success),
+          _getMessage(message),
+          _getOkButton(AppStrings.ok, context)
         ]);
       case StateRendererType.FULL_SCREEN_LOADING_STATE:
         return _getItemsInColumn(
@@ -127,6 +134,22 @@ class StateRenderer extends StatelessWidget {
                 } else {
                   Navigator.of(context).pop();
                 }
+              },
+              child: Text(buttonTitle)),
+        ),
+      ),
+    );
+  }
+
+  Widget _getOkButton(String buttonTitle, BuildContext context) {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(AppPadding.p18),
+        child: SizedBox(
+          width: AppSize.s180,
+          child: ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pop();
               },
               child: Text(buttonTitle)),
         ),

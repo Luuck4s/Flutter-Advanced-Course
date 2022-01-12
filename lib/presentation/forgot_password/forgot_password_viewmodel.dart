@@ -49,7 +49,7 @@ class ForgotPasswordViewModel extends BaseViewModel
                   ),
                 },
             (data) => {
-                  inputState.add(ContentState()),
+                  inputState.add(SuccessState(data.support)),
                   isForgotPasswordSendSuccessfullyController.add(true)
                 });
   }
