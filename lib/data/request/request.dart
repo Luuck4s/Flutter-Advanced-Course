@@ -12,3 +12,19 @@ class ForgotPasswordRequest {
 
   ForgotPasswordRequest(this.email);
 }
+
+class RegisterRequest {
+  String countryMobileCode;
+  String userName;
+  String email;
+  String password;
+  String profilePicture;
+
+  RegisterRequest(
+    this.countryMobileCode,
+    this.userName,
+    this.email,
+    this.password,
+    this.profilePicture,
+  );
+}
