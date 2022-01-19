@@ -36,4 +36,9 @@ class AppStrings {
   static const String loading = "Loading";
   static const String retry_again = "Retry Again";
   static const String ok = "Ok";
+
+  static const String home = "Home";
+  static const String notification = "Notification";
+  static const String settings = "Settings";
+  static const String search = "Search";
 }

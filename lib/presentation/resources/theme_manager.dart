@@ -11,7 +11,8 @@ ThemeData getApplicationTheme() {
     primaryColorLight: ColorManager.primaryOpacity70,
     primaryColorDark: ColorManager.darkPrimary,
     disabledColor: ColorManager.grey1,
-    colorScheme: ColorScheme.fromSwatch().copyWith(secondary: ColorManager.grey),
+    colorScheme:
+        ColorScheme.fromSwatch().copyWith(secondary: ColorManager.grey),
     splashColor: ColorManager.primaryOpacity70,
     // card view theme
     cardTheme: CardTheme(
@@ -55,6 +56,10 @@ ThemeData getApplicationTheme() {
     textTheme: TextTheme(
       headline1: getSemiBoldStyle(
         color: ColorManager.darkGrey,
+        fontSize: FontSize.s16,
+      ),
+      headline2: getRegularStyle(
+        color: ColorManager.white,
         fontSize: FontSize.s16,
       ),
       subtitle1: getMediumStyle(
