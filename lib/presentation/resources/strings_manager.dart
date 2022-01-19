@@ -19,13 +19,19 @@ class AppStrings {
 
   static const String username = "Username";
   static const String usernameError = "Username is wrong";
+  static const String mobileNumber = "Mobile Number";
+  static const String email = "Email";
   static const String password = "Password";
+  static const String profilePicture = "Profile Picture";
   static const String passwordError = "Password is wrong";
   static const String login = "Login";
+  static const String register = "Register";
   static const String forgetPassword = "Forget Password";
   static const String resetPassword = "Reset Password";
   static const String forgetPasswordresend = "Didn't receive email ? Resend";
   static const String registerText = "Not a member ? Sign up";
+  static const String photoGallery = "Photo Gallery";
+  static const String photoCamera = "Photo Camera";
 
   static const String loading = "Loading";
   static const String retry_again = "Retry Again";

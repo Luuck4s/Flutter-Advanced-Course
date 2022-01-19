@@ -37,10 +37,12 @@ class RemoteDataSourceImplementer implements RemoteDataSource {
       RegisterRequest registerRequest) async {
     return await _appServiceClient.register(
       registerRequest.countryMobileCode,
+      registerRequest.mobileNumber,
       registerRequest.userName,
       registerRequest.email,
       registerRequest.password,
-      registerRequest.profilePicture,
+      // registerRequest.profilePicture,
+      "",
     );
   }
 }
