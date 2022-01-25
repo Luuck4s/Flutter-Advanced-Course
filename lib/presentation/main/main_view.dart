@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_advanced_course/presentation/main/home_page.dart';
+import 'package:flutter_advanced_course/presentation/main/home/home_page.dart';
 import 'package:flutter_advanced_course/presentation/main/notification_page.dart';
 import 'package:flutter_advanced_course/presentation/main/search_page.dart';
 import 'package:flutter_advanced_course/presentation/main/settings_page.dart';
