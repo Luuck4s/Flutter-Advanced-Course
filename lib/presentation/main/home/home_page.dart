@@ -6,8 +6,10 @@ import 'package:flutter_advanced_course/domain/model/model.dart';
 import 'package:flutter_advanced_course/presentation/common/state_renderer/state_renderer_impl.dart';
 import 'package:flutter_advanced_course/presentation/main/home/home_viewmode.dart';
 import 'package:flutter_advanced_course/presentation/resources/color_manager.dart';
+import 'package:flutter_advanced_course/presentation/resources/font_manager.dart';
 import 'package:flutter_advanced_course/presentation/resources/routes_manager.dart';
 import 'package:flutter_advanced_course/presentation/resources/strings_manager.dart';
+import 'package:flutter_advanced_course/presentation/resources/styles_manager.dart';
 import 'package:flutter_advanced_course/presentation/resources/values_manager.dart';
 
 class HomePage extends StatefulWidget {
@@ -55,16 +57,21 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _getContentWidgets() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        _getBannersCarrousel(),
-        _getSection(AppStrings.services),
-        _getServices(),
-        _getSection(AppStrings.stores),
-        _getStores(),
-      ],
-    );
+    return StreamBuilder<HomeViewObject>(
+        stream: _viewModel.outputHomeData,
+        builder: (context, snapshot) {
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _getBanner(snapshot.data?.banners),
+              _getSection(AppStrings.services),
+              _getServicesItem(snapshot.data?.services),
+              _getSection(AppStrings.stores),
+              _getStoreItem(snapshot.data?.stores),
+            ],
+          );
+          ;
+        });
   }
 
   Widget _getSection(String title) {
@@ -78,15 +85,6 @@ class _HomePageState extends State<HomePage> {
         title,
         style: Theme.of(context).textTheme.headline3,
       ),
-    );
-  }
-
-  Widget _getBannersCarrousel() {
-    return StreamBuilder<List<BannerAd>>(
-      stream: _viewModel.outputBanners,
-      builder: (context, snapshot) {
-        return _getBanner(snapshot.data);
-      },
     );
   }
 
@@ -127,15 +125,6 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
-  Widget _getServices() {
-    return StreamBuilder<List<Service>>(
-      stream: _viewModel.outputServices,
-      builder: (context, snapshot) {
-        return _getServicesItem(snapshot.data);
-      },
-    );
-  }
-
   Widget _getServicesItem(List<Service>? services) {
     if (services != null) {
       return Padding(
@@ -161,27 +150,33 @@ class _HomePageState extends State<HomePage> {
                         width: AppSize.s1_5,
                       ),
                     ),
-                    child: Column(
+                    child: Stack(
                       children: [
                         ClipRRect(
                           borderRadius: BorderRadius.circular(AppSize.s12),
                           child: Image.network(
                             service.image,
                             fit: BoxFit.cover,
+                            color: Colors.black.withOpacity(0.35),
+                            colorBlendMode: BlendMode.darken,
                             width: AppSize.s100,
-                            height: AppSize.s100,
+                            height: double.infinity,
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: AppPadding.p8),
-                          child: Align(
-                            alignment: Alignment.center,
-                            child: Text(
-                              service.title,
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                        )
+                        Positioned(
+                            bottom: 20,
+                            right: 5,
+                            child: RotatedBox(
+                              quarterTurns: 3,
+                              child: Text(
+                                service.title,
+                                style: getBoldStyle(
+                                  color: ColorManager.white,
+                                  fontSize: FontSize.s20,
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
+                            ))
                       ],
                     ),
                   ),
@@ -193,15 +188,6 @@ class _HomePageState extends State<HomePage> {
     } else {
       return Container();
     }
-  }
-
-  Widget _getStores() {
-    return StreamBuilder<List<Store>>(
-      stream: _viewModel.outputStores,
-      builder: (context, snapshot) {
-        return _getStoreItem(snapshot.data);
-      },
-    );
   }
 
   Widget _getStoreItem(List<Store>? stores) {
