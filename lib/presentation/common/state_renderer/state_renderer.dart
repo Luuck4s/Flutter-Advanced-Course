@@ -9,6 +9,7 @@ import 'package:flutter_advanced_course/presentation/resources/strings_manager.d
 import 'package:flutter_advanced_course/presentation/resources/styles_manager.dart';
 import 'package:flutter_advanced_course/presentation/resources/values_manager.dart';
 import 'package:lottie/lottie.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 enum StateRendererType {
   POPUP_LOADING_STATE,
@@ -34,7 +35,7 @@ class StateRenderer extends StatelessWidget {
     String? message,
     String? title,
     required this.retryActionFunction,
-  })  : message = message ?? AppStrings.loading,
+  })  : message = message ?? AppStrings.loading.tr(),
         title = title ?? EMPTY,
         super(key: key);
 
@@ -53,13 +54,13 @@ class StateRenderer extends StatelessWidget {
         return _getPopUpDialog(context, [
           _getAnimatedImage(JsonAssets.error),
           _getMessage(message),
-          _getRetryButton(AppStrings.ok, context)
+          _getRetryButton(AppStrings.ok.tr(), context)
         ]);
       case StateRendererType.POPUP_SUCCESS_STATE:
         return _getPopUpDialog(context, [
           _getAnimatedImage(JsonAssets.success),
           _getMessage(message),
-          _getOkButton(AppStrings.ok, context)
+          _getOkButton(AppStrings.ok.tr(), context)
         ]);
       case StateRendererType.FULL_SCREEN_LOADING_STATE:
         return _getItemsInColumn(
@@ -68,7 +69,7 @@ class StateRenderer extends StatelessWidget {
         return _getItemsInColumn([
           _getAnimatedImage(JsonAssets.error),
           _getMessage(message),
-          _getRetryButton(AppStrings.retry_again, context)
+          _getRetryButton(AppStrings.retry_again.tr(), context)
         ]);
       case StateRendererType.CONTENT_SCREEN_STATE:
         return Container();

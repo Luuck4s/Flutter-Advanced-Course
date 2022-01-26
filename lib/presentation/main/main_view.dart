@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_course/presentation/main/home/home_page.dart';
 import 'package:flutter_advanced_course/presentation/main/notifications/notification_page.dart';
-import 'package:flutter_advanced_course/presentation/main/search_page.dart';
+import 'package:flutter_advanced_course/presentation/main/search/search_page.dart';
 import 'package:flutter_advanced_course/presentation/main/settings/settings_page.dart';
 import 'package:flutter_advanced_course/presentation/resources/color_manager.dart';
 import 'package:flutter_advanced_course/presentation/resources/strings_manager.dart';
 import 'package:flutter_advanced_course/presentation/resources/values_manager.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class MainView extends StatefulWidget {
   const MainView({Key? key}) : super(key: key);
@@ -23,13 +24,13 @@ class _MainViewState extends State<MainView> {
   ];
 
   List<String> titles = [
-    AppStrings.home,
-    AppStrings.search,
-    AppStrings.notification,
-    AppStrings.settings,
+    AppStrings.home.tr(),
+    AppStrings.search.tr(),
+    AppStrings.notification.tr(),
+    AppStrings.settings.tr(),
   ];
 
-  var _title = AppStrings.home;
+  var _title = AppStrings.home.tr();
   var _currentIndex = 0;
 
   @override

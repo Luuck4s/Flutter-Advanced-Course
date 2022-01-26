@@ -8,6 +8,7 @@ import 'package:flutter_advanced_course/presentation/resources/color_manager.dar
 import 'package:flutter_advanced_course/presentation/resources/routes_manager.dart';
 import 'package:flutter_advanced_course/presentation/resources/strings_manager.dart';
 import 'package:flutter_advanced_course/presentation/resources/values_manager.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class ForgotPasswordView extends StatefulWidget {
   const ForgotPasswordView({Key? key}) : super(key: key);
@@ -91,11 +92,11 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
                         keyboardType: TextInputType.emailAddress,
                         controller: _usernameController,
                         decoration: InputDecoration(
-                            hintText: AppStrings.username,
-                            labelText: AppStrings.username,
+                            hintText: AppStrings.username.tr(),
+                            labelText: AppStrings.username.tr(),
                             errorText: (snapshot.data ?? true)
                                 ? null
-                                : AppStrings.usernameError),
+                                : AppStrings.usernameError.tr()),
                       );
                     }),
               ),
@@ -119,7 +120,7 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
                                 _viewModel.send();
                               }
                             : null,
-                        child: const Text(AppStrings.resetPassword),
+                        child: Text(AppStrings.resetPassword.tr()),
                       ),
                     );
                   },
@@ -135,7 +136,7 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      AppStrings.forgetPasswordresend,
+                      AppStrings.forgetPasswordresend.tr(),
                       style: Theme.of(context).textTheme.subtitle2,
                     ),
                     TextButton(
@@ -144,7 +145,7 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
                             context, Routes.loginRoute);
                       },
                       child: Text(
-                        AppStrings.login,
+                        AppStrings.login.tr(),
                         style: Theme.of(context).textTheme.subtitle2,
                       ),
                     ),

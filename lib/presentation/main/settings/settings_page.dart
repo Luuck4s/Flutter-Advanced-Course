@@ -5,6 +5,8 @@ import 'package:flutter_advanced_course/data/data_source/local_data_source.dart'
 import 'package:flutter_advanced_course/presentation/resources/routes_manager.dart';
 import 'package:flutter_advanced_course/presentation/resources/strings_manager.dart';
 import 'package:flutter_advanced_course/presentation/resources/values_manager.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter_phoenix/flutter_phoenix.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({Key? key}) : super(key: key);
@@ -26,7 +28,7 @@ class _SettingsPageState extends State<SettingsPage> {
           leading: Icon(Icons.language),
           trailing: Icon(Icons.arrow_forward),
           title: Text(
-            AppStrings.changeLanguage,
+            AppStrings.changeLanguage.tr(),
             style: Theme.of(context).textTheme.headline4,
           ),
           onTap: _changeLanguage,
@@ -35,7 +37,7 @@ class _SettingsPageState extends State<SettingsPage> {
           leading: Icon(Icons.contacts),
           trailing: Icon(Icons.arrow_forward),
           title: Text(
-            AppStrings.contactUs,
+            AppStrings.contactUs.tr(),
             style: Theme.of(context).textTheme.headline4,
           ),
           onTap: _contactUs,
@@ -44,7 +46,7 @@ class _SettingsPageState extends State<SettingsPage> {
           leading: Icon(Icons.share),
           trailing: Icon(Icons.arrow_forward),
           title: Text(
-            AppStrings.inviteYourFriend,
+            AppStrings.inviteYourFriend.tr(),
             style: Theme.of(context).textTheme.headline4,
           ),
           onTap: _inviteFriends,
@@ -53,7 +55,7 @@ class _SettingsPageState extends State<SettingsPage> {
           leading: Icon(Icons.logout),
           trailing: Icon(Icons.arrow_forward),
           title: Text(
-            AppStrings.logout,
+            AppStrings.logout.tr(),
             style: Theme.of(context).textTheme.headline4,
           ),
           onTap: _logout,
@@ -62,7 +64,10 @@ class _SettingsPageState extends State<SettingsPage> {
     );
   }
 
-  void _changeLanguage() {}
+  void _changeLanguage() {
+    _appPreferences.setLanguageChanged();
+    Phoenix.rebirth(context);
+  }
 
   void _contactUs() {}
 

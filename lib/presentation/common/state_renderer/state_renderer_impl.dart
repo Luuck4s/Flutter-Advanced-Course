@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_advanced_course/data/mapper/mapper.dart';
 import 'package:flutter_advanced_course/presentation/common/state_renderer/state_renderer.dart';
 import 'package:flutter_advanced_course/presentation/resources/strings_manager.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 abstract class FlowState {
   StateRendererType getStateRendererType();
@@ -15,7 +16,7 @@ class LoadingState extends FlowState {
   String message;
 
   LoadingState({required this.stateRendererType, String? message})
-      : message = message ?? AppStrings.loading;
+      : message = message ?? AppStrings.loading.tr();
 
   @override
   StateRendererType getStateRendererType() => stateRendererType;

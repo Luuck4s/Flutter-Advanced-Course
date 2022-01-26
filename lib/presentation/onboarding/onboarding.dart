@@ -9,7 +9,7 @@ import 'package:flutter_advanced_course/presentation/resources/color_manager.dar
 import 'package:flutter_advanced_course/presentation/resources/strings_manager.dart';
 import 'package:flutter_advanced_course/presentation/resources/values_manager.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
+import 'package:easy_localization/easy_localization.dart';
 import '../resources/routes_manager.dart';
 
 class OnBoardingView extends StatefulWidget {
@@ -91,7 +91,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                     Navigator.pushReplacementNamed(context, Routes.loginRoute);
                   },
                   child: Text(
-                    AppStrings.skip,
+                    AppStrings.skip.tr(),
                     textAlign: TextAlign.end,
                     style: Theme.of(context).textTheme.subtitle2,
                   ),

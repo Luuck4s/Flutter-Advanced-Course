@@ -96,6 +96,7 @@ flutter:
     - assets/json/error.json
     - assets/json/empty.json
     - assets/json/success.json
+    - assets/translations/
   
 
   # An image asset can refer to one or more resolution-specific "variants", see
