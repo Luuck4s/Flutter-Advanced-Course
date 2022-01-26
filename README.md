@@ -1,5 +1,5 @@
 <p  align="center">
-<img  alt="App"  src=".github/banner.png"  width="80%">
+<img  alt="App"  src=".github/banner.png"  width="100%">
 </p>
 
   
@@ -24,15 +24,15 @@ Projeto desenvolvido durante o curso de Flutter da Udemy [Flutter Advanced Cours
 ## 💜 Preview
  
 <p  align="center">
-<img  alt="App login"  src=".github/login.png"  width="100%">
+<img  alt="App login"  src=".github/login.png"  width="30%">
 </p>
 
 <p  align="center">
-<img  alt="App register"  src=".github/register.png"  width="100%">
+<img  alt="App register"  src=".github/register.png"  width="30%">
 </p>
 
 <p  align="center">
-<img  alt="App home"  src=".github/home.png"  width="100%">
+<img  alt="App home"  src=".github/home.png"  width="30%">
 </p>
 
  
