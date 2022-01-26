@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_advanced_course/app/di.dart';
 import 'package:flutter_advanced_course/presentation/forgot_password/forgot_password.dart';
 import 'package:flutter_advanced_course/presentation/login/login.dart';
-import 'package:flutter_advanced_course/presentation/main/main_view.dart';
+import 'package:flutter_advanced_course/presentation/main/search/main_view.dart';
 import 'package:flutter_advanced_course/presentation/onboarding/onboarding.dart';
 import 'package:flutter_advanced_course/presentation/register/register.dart';
 import 'package:flutter_advanced_course/presentation/resources/strings_manager.dart';

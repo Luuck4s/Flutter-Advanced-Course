@@ -165,7 +165,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         Positioned(
                             bottom: 20,
-                            right: 5,
+                            left: 5,
                             child: RotatedBox(
                               quarterTurns: 3,
                               child: Text(

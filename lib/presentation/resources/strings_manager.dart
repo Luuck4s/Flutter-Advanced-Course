@@ -33,6 +33,11 @@ class AppStrings {
   static const String photoGallery = "Photo Gallery";
   static const String photoCamera = "Photo Camera";
 
+  static const String changeLanguage = "Change Language";
+  static const String contactUs = "Contact Us";
+  static const String inviteYourFriend = "Invite Your Friend";
+  static const String logout = "Logout";
+
   static const String loading = "Loading";
   static const String retry_again = "Retry Again";
   static const String ok = "Ok";
