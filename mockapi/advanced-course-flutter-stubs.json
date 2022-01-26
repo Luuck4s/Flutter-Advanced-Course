@@ -1,0 +1,149 @@
+{
+  "mappings" : [ {
+    "id" : "aaec5567-38b6-400b-965d-3da89cfd0580",
+    "name" : "Store Details",
+    "request" : {
+      "url" : "/storeDetails/1",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"status\": 0,\n  \"message\": \"Success\",\n  \"image\": \"https://images.unsplash.com/photo-1562280963-8a5475740a10?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80\",\n  \"id\": 1,\n  \"title\": \"Amazing Stores\",\n  \"details\": \"Details Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum\",\n  \"services\": \"Services Store Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum\",\n  \"about\": \"About Store Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      },
+      "fixedDelayMilliseconds" : 2000
+    },
+    "uuid" : "aaec5567-38b6-400b-965d-3da89cfd0580",
+    "persistent" : true,
+    "priority" : 5,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2022-01-26T00:38:40.133Z",
+          "via" : "SYSTEM"
+        }
+      }
+    }
+  }, {
+    "id" : "4ac200da-7a77-47a9-9024-e396f81f5185",
+    "name" : "Home",
+    "request" : {
+      "urlPath" : "/home",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"status\": 0,\n  \"message\": \"Success\",\n  \"data\": {\n    \"services\": [\n      {\n        \"id\": 1,\n        \"title\": \"Service 1\",\n        \"image\": \"https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80\"\n      },\n      {\n        \"id\": 2,\n        \"title\": \"Service 2\",\n        \"image\": \"https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80\"\n      },\n      {\n        \"id\": 3,\n        \"title\": \"Service 3\",\n        \"image\": \"https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80\"\n      },\n      {\n        \"id\": 4,\n        \"title\": \"Service 4\",\n        \"image\": \"https://images.unsplash.com/photo-1521790797524-b2497295b8a0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80\"\n      },\n      {\n        \"id\": 5,\n        \"title\": \"Service 5\",\n        \"image\": \"https://images.unsplash.com/photo-1556745753-b2904692b3cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80\"\n      },\n      {\n        \"id\": 6,\n        \"title\": \"Service 6\",\n        \"image\": \"https://images.unsplash.com/photo-1603714228681-b399854b8f80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80\"\n      }\n    ],\n    \"banners\": [\n      {\n        \"id\": 1,\n        \"link\": \"\",\n        \"title\": \"banner 1\",\n        \"image\": \"https://images.unsplash.com/photo-1598511756475-c722aeaf9ad5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80\"\n      },\n      {\n        \"id\": 2,\n        \"link\": \"\",\n        \"title\": \"banner 2\",\n        \"image\": \"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80\"\n      },\n      {\n        \"id\": 3,\n        \"title\": \"banner 3\",\n        \"image\": \"https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80\"\n      },\n      {\n        \"id\": 4,\n        \"title\": \"banner 4\",\n        \"image\": \"https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80\"\n      }\n    ],\n    \"stores\": [\n      {\n        \"id\": 1,\n        \"title\": \"Store 1\",\n        \"image\": \"https://images.unsplash.com/photo-1562280963-8a5475740a10?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80\"\n      },\n      {\n        \"id\": 2,\n        \"title\": \"Store 2\",\n        \"image\": \"https://images.unsplash.com/photo-1579026111824-6f6e4daf2ffd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c3RvcmVzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60\"\n      },\n      {\n        \"id\": 3,\n        \"title\": \"Store 3\",\n        \"image\": \"https://images.unsplash.com/photo-1482859602406-7659b00979fb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHN0b3Jlc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60\"\n      },\n      {\n        \"id\": 4,\n        \"title\": \"Store 4\",\n        \"image\": \"https://images.unsplash.com/photo-1569565195293-c5e30f91b40c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fHN0b3Jlc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60\"\n      },\n      {\n        \"id\": 5,\n        \"title\": \"Store 5\",\n        \"image\": \"https://images.unsplash.com/photo-1555686913-2e38a187c840?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHN0b3Jlc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60\"\n      },\n      {\n        \"id\": 6,\n        \"title\": \"Store 6\",\n        \"image\": \"https://images.unsplash.com/photo-1542581482-851c38ee4b94?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHN0b3Jlc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60\"\n      }\n    ]\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      },
+      "fixedDelayMilliseconds" : 4000
+    },
+    "uuid" : "4ac200da-7a77-47a9-9024-e396f81f5185",
+    "persistent" : true,
+    "priority" : 5,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2022-01-26T00:38:40.133Z",
+          "via" : "SYSTEM"
+        }
+      }
+    }
+  }, {
+    "id" : "1b536732-d4bd-4162-95e3-45e7be053638",
+    "name" : "Register",
+    "request" : {
+      "url" : "/customers/register",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "json"
+        }
+      },
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\n  \"country_mobile_code\":  \"+55\",\n  \"user_name\": \"abcef123\",\n  \"email\": \"lucas@flutter.com\",\n  \"password\": \"abcef123\",\n  \"mobile_number\": \"1234567891\",\n  \"profile_picture\": \"\"\n}"
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"status\": 0,\n  \"message\": \"Success\",\n  \"customer\": {\n    \"id\": \"1234567890\",\n    \"name\": \"Lucas Lima\",\n    \"numOfNotifications\": 12\n  },\n  \"contacts\": {\n    \"phone\": \"123456\",\n    \"link\": \"lucas@flutter.com\",\n    \"email\": \"lucas@flutter.com\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1b536732-d4bd-4162-95e3-45e7be053638",
+    "persistent" : true,
+    "priority" : 5,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2022-01-26T00:38:40.133Z",
+          "via" : "SYSTEM"
+        }
+      }
+    }
+  }, {
+    "id" : "88a83e85-aa90-4c5c-a406-a6baec2e4b80",
+    "name" : "Forgot Password",
+    "request" : {
+      "url" : "/customers/forgotPassword",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\n  \"email\": \"abc\"\n}"
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"status\": 0,\n  \"message\": \"success\",\n  \"support\": \"We have sent an email to you. if you need any help, contact us on support@app.com\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "88a83e85-aa90-4c5c-a406-a6baec2e4b80",
+    "persistent" : true,
+    "priority" : 5,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2022-01-26T00:38:40.133Z",
+          "via" : "SYSTEM"
+        }
+      }
+    }
+  }, {
+    "id" : "a6a4a24e-d602-41ae-a2de-edc32c86b90e",
+    "name" : "Login",
+    "request" : {
+      "url" : "/customers/login",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "\n\n{\"email\": \"abc\", \"password\": \"123\", \"imei\": \"9a673aca980de8a9\", \"deviceType\": \"Android Android SDK built for x86\"}",
+        "ignoreArrayOrder" : false,
+        "ignoreExtraElements" : false
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"status\": 0,\n  \"message\": \"Success\",\n  \"customer\": {\n    \"id\": \"1234567890\",\n    \"name\": \"Lucas Lima\",\n    \"numOfNotifications\": 12\n  },\n  \"contacts\": {\n    \"phone\": \"123456\",\n    \"link\": \"lucas@flutter.com\",\n    \"email\": \"lucas@flutter.com\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a6a4a24e-d602-41ae-a2de-edc32c86b90e",
+    "persistent" : true,
+    "priority" : 5,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2022-01-26T00:38:40.132Z",
+          "via" : "SYSTEM"
+        }
+      }
+    }
+  } ],
+  "meta" : {
+    "total" : 5
+  }
+}
